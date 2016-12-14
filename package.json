@@ -1,0 +1,39 @@
+{
+  "name": "postcss-walk",
+  "version": "0.0.1",
+  "description": "Recursively walk directories, compiling index CSS files and copying assets to a build directory.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayrbolton/postcss-walk.git"
+  },
+  "keywords": [
+    "postcss",
+    "compile",
+    "recursive",
+    "directory"
+  ],
+  "author": "jay r bolton <jayrbolton@gmail.com> (http://jayrbolton.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jayrbolton/postcss-walk/issues"
+  },
+  "homepage": "https://github.com/jayrbolton/postcss-walk#readme",
+  "devDependencies": {
+    "autoprefixer": "6.5.4",
+    "postcss-color-function": "2.0.1",
+    "postcss-import": "9.0.0",
+    "precss": "1.4.0"
+  },
+  "dependencies": {
+    "chalk": "1.1.3",
+    "postcss": "5.2.6",
+    "ramda": "0.22.1"
+  }
+}
