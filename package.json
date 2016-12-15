@@ -1,6 +1,6 @@
 {
   "name": "postcss-walk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Recursively walk directories, compiling index CSS files and copying assets to a build directory.",
   "main": "index.js",
   "directories": {
