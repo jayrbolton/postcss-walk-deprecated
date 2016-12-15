@@ -1,10 +1,11 @@
+'use strict'
 const R = require('ramda')
 const fs = require('fs')
 const postcss = require('postcss')
 const chalk = require('chalk')
 
 
-let log = ()=>{}
+var log = ()=>{}
 
 // options.plugins is an array of postcss plugin modules
 // options.input is the top-level directory of containing all input css files
@@ -21,8 +22,8 @@ const initialize = options => {
 // Uses a stack, not actual recursion
 const walkDir = (input, options) => {
   const inputRegex = new RegExp("^" + options.input.replace('/', '\/'))
-  let stack = [input]
-  let result = {indexFiles: [], directories: [], assetFiles: []}
+  var stack = [input]
+  var result = {indexFiles: [], directories: [], assetFiles: []}
   // Tree traversal of directory structure using stack recursion
   while(stack.length) {
     input = stack.pop()
@@ -55,9 +56,9 @@ const walkDir = (input, options) => {
 const copyAsset = (input, output) => {
   createDirs(output)
   log(chalk.blue('>>      copying: ' + input + ' to ' + output))
-  let rd = fs.createReadStream(input)
+  var rd = fs.createReadStream(input)
   rd.on('error', err => log('!! read error: ' + input + " - " + err))
-  let wr = fs.createWriteStream(output)
+  var wr = fs.createWriteStream(output)
   wr.on('error', err => log(chalk.red('!! write error: ' + input + ' - ' + err)))
   rd.pipe(wr)
 }
